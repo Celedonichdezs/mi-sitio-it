@@ -1,0 +1,5 @@
+name = "mi-sitio-it"
+compatibility_date = "2024-12-27"
+
+[site]
+bucket = "."
