@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0a2e45;
+  --color-navy-dark: #071f30;
+  --color-teal-brand: #0eacc0;
+  --color-teal-dark: #0b7a8a;
+  --color-whatsapp: #25d366;
+  --font-serif-brand: Georgia, "Times New Roman", serif;
+  --font-sans-brand: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans-brand);
+}
