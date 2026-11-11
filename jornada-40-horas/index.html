@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Jornada de 40 horas México 2030 — Guía para tu negocio | TechNexus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Public+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f7f5; --surface:#ffffff; --surface2:#eef3f2; --ink:#13222e; --muted:#52616c;
+    --navy:#0f2a44; --navy2:#16395c; --teal:#0e7c7b; --teal-soft:#dff0ee; --amber:#9a6206; --amber-bg:#fdf0d3;
+    --red:#9c2b1e; --red-bg:#fbe9e5; --line:#d7dee0; --radius:14px;
+    --shadow:0 10px 28px rgba(15,42,68,.10);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b1824; --surface:#122636; --surface2:#162e42; --ink:#e8eff2; --muted:#a7b8c2;
+      --navy:#8fb8dd; --navy2:#c3d9ee; --teal:#3ec2bd; --teal-soft:#123a3c; --amber:#f0bc5e; --amber-bg:#3a2c10;
+      --red:#ff9a8a; --red-bg:#3d1e18; --line:#2a4358; --shadow:0 10px 28px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;line-height:1.55;font-size:16px}
+  button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:2.25rem}
+  a{color:var(--teal);text-underline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px 64px}
+  h1,h2{font-family:"Libre Caslon Text",Georgia,serif;line-height:1.12;color:var(--navy);margin:0}
+  h1{font-size:clamp(2rem,5.2vw,3.4rem);font-weight:700}
+  h2{font-size:clamp(1.45rem,3vw,2rem);margin-bottom:10px}
+  h3{font-size:1.05rem;margin:0 0 6px}
+  p{margin:0 0 12px}
+  .muted{color:var(--muted)}
+  .mono{font-family:"IBM Plex Mono",monospace}
+
+  /* Hero */
+  .hero{padding:36px 0 8px}
+  .brandline{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:18px}
+  .brandline .brand{font-family:"Libre Caslon Text",serif;font-weight:700;font-size:1.15rem;color:var(--navy);letter-spacing:.01em}
+  .brandline .lema{color:var(--teal);font-weight:700;font-size:.86rem}
+  .brandline .dot{color:var(--muted)}
+  .lead{font-size:1.13rem;max-width:46rem;margin-top:14px}
+  .countdown{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch;margin:22px 0 6px}
+  .cd-box{background:var(--navy);border-radius:var(--radius);padding:18px 22px;color:#fff;min-width:230px;flex:0 1 auto}
+  @media (prefers-color-scheme: dark){ .cd-box{background:#1d4e5e} }
+  .cd-box .num{font-family:"IBM Plex Mono",monospace;font-size:2.6rem;font-weight:600;line-height:1}
+  .cd-box .lbl{font-size:.88rem;opacity:.92;margin-top:6px}
+  .alert-strip{background:var(--amber-bg);border:1px solid var(--amber);border-radius:var(--radius);padding:14px 18px;flex:1 1 320px}
+  .alert-strip strong{color:var(--amber)}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:20px 0 8px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+  .stat .big{font-family:"IBM Plex Mono",monospace;font-size:1.55rem;font-weight:600;color:var(--navy);line-height:1.15}
+  .stat .cap{font-size:.9rem;color:var(--muted);margin-top:5px}
+
+  section{margin-top:44px}
+  .sec-intro{max-width:48rem;color:var(--muted)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:820px){ .grid2,.grid3{grid-template-columns:1fr} }
+
+  /* Tables */
+  .tbl{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.94rem}
+  .tbl caption{text-align:left;font-weight:700;padding:12px 16px 4px;color:var(--navy)}
+  .tbl th{background:var(--surface2);text-align:left;padding:10px 14px;font-size:.82rem;letter-spacing:.02em;color:var(--navy);border-bottom:1px solid var(--line)}
+  .tbl td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  .tbl tr:last-child td{border-bottom:none}
+  .tbl .num{text-align:right;font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+  .tbl td.hl{font-weight:700;color:var(--navy)}
+  @media (max-width:640px){
+    .tbl{font-size:.88rem}
+    .tbl th,.tbl td{padding:8px 10px}
+  }
+  .tbl-wrap{margin:14px 0}
+
+  /* Timeline hitos */
+  .hitos{list-style:none;margin:0;padding:0}
+  .hitos li{display:flex;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .hitos li:last-child{border-bottom:none}
+  .hitos .fecha{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--teal);min-width:104px;flex-shrink:0}
+  @media (max-width:560px){ .hitos li{flex-direction:column;gap:2px} }
+
+  ul.check{list-style:none;margin:0;padding:0}
+  ul.check li{padding:9px 0 9px 30px;position:relative;border-bottom:1px dashed var(--line)}
+  ul.check li:last-child{border-bottom:none}
+  ul.check li::before{content:"";position:absolute;left:2px;top:13px;width:14px;height:14px;border-radius:4px;background:var(--teal-soft);border:2px solid var(--teal)}
+  ul.plain{margin:0;padding-left:20px}
+  ul.plain li{margin-bottom:7px}
+
+  .tag{display:inline-block;font-size:.76rem;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:.02em}
+  .tag-hecho{background:var(--teal-soft);color:var(--teal)}
+  .tag-prop{background:var(--surface2);color:var(--navy);border:1px solid var(--line)}
+  .tag-pend{background:var(--amber-bg);color:var(--amber)}
+  .tag-no{background:var(--red-bg);color:var(--red)}
+
+  .warn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:14px}
+  .warn{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:10px;padding:16px 18px}
+  .warn.red{border-top-color:var(--red)}
+
+  .pkg{border-radius:var(--radius);padding:22px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .pkg.featured{border:2px solid var(--teal)}
+  .pkg .price{font-family:"IBM Plex Mono",monospace;font-size:2rem;font-weight:600;color:var(--navy);line-height:1.1;margin:8px 0 2px}
+  .pkg .per{color:var(--muted);font-size:.9rem}
+  .pkg ul{margin:12px 0 0;padding-left:18px;font-size:.93rem}
+  .pkg ul li{margin-bottom:5px}
+
+  /* Calculator */
+  .calc{background:var(--navy);border-radius:var(--radius);padding:24px;color:#eef4f8;margin-top:16px}
+  @media (prefers-color-scheme: dark){ .calc{background:#10293f;border:1px solid var(--line)} }
+  .calc h3{color:#fff;font-size:1.2rem}
+  .calc .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px}
+  .calc label{font-size:.86rem;font-weight:600;display:block;margin-bottom:6px;color:#cfe0ec}
+  .calc select,.calc input[type="number"]{width:100%;padding:9px 10px;border-radius:8px;border:1px solid #4a6a86;background:#fff;color:#13222e;font-size:1rem}
+  .calc .checkline{display:flex;align-items:center;gap:10px;padding:10px 0;font-size:.95rem}
+  .calc .checkline label{margin:0;padding:6px 0}
+  .calc .checkline input{width:22px;height:22px;accent-color:#3ec2bd}
+  .calc-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:16px}
+  .calc-out .cell{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:14px 16px}
+  .calc-out .v{font-family:"IBM Plex Mono",monospace;font-size:1.45rem;font-weight:600}
+  .calc-out .k{font-size:.82rem;color:#cfe0ec;margin-top:3px}
+  .calc .note{font-size:.85rem;color:#b9cfdd;margin-top:12px}
+
+  /* Semana plan */
+  .weeks{display:grid;gap:0}
+  .week{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .week:last-child{border-bottom:none}
+  .week .wk{font-weight:800;color:var(--navy)}
+  .week .wk .dates{display:block;font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:.85rem;color:var(--teal);margin-top:3px}
+  @media (max-width:640px){ .week{grid-template-columns:1fr;gap:6px} }
+
+  .say{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+  @media (max-width:820px){ .say{grid-template-columns:1fr} }
+  .say .si{background:var(--teal-soft);border-radius:var(--radius);padding:18px 20px}
+  .say .no{background:var(--red-bg);border-radius:var(--radius);padding:18px 20px}
+  .say ul{margin:8px 0 0;padding-left:18px}
+  .say li{margin-bottom:6px}
+
+  .srcs{font-size:.9rem}
+  .srcs li{margin-bottom:9px}
+  footer{margin-top:52px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.88rem}
+  .chartbox{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-top:14px}
+  .chartbox svg{width:100%;height:auto;display:block}
+  .example{background:var(--surface2);border-radius:10px;padding:16px 18px;margin-top:12px;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="brandline">
+      <span class="brand">TechNexus</span><span class="dot">·</span>
+      <span class="lema">Conecta. Protege. Optimiza.</span><span class="dot">·</span>
+      <span class="muted">Valle de Toluca</span>
+    </div>
+    <h1>Jornada de 40 horas: la reforma ya es ley, y el primer plazo vence el 1 de enero de 2027</h1>
+    <p class="lead">La jornada baja de 48 a 40 horas de forma gradual hasta 2030, sin bajar sueldos ni prestaciones. Pero la obligación que llega primero no es la de 40 horas: es el <strong>registro electrónico de asistencia</strong> — cuyo alcance y posibles excepciones definirá la STPS en disposiciones generales <strong>aún no publicadas</strong>. Esta guía explica, sin tecnicismos, qué dice la ley, qué tienes que registrar, cuánto es la multa y cómo prepararte antes de enero — con paquetes claros y una calculadora para que sepas cuánto te costaría cumplir.</p>
+
+    <div class="countdown">
+      <div class="cd-box">
+        <div class="num" id="cdNum">—</div>
+        <div class="lbl">días para el 1 de enero de 2027:<br>jornada de <strong>46 horas</strong> + inicio del registro electrónico, según el ámbito que definan las disposiciones STPS pendientes</div>
+      </div>
+      <div class="alert-strip">
+        <strong>¿Huella, rostro o app? Depende de tu negocio.</strong> No hay un equipo único para todos: influyen cuántos empleados tienes, si usan guantes, si hay rotación, si trabajan en campo o en más de una sucursal. Por eso la recomendación exacta — qué tipo de registro te conviene y por qué — se define en el <strong>diagnóstico</strong>, ya con tu caso concreto sobre la mesa.
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="big">46 h</div><div class="cap">Jornada máxima desde el 1-ene-2027. Para quien hoy trabaja 48 h, la hora 47 ya es hora extra.</div></div>
+      <div class="stat"><div class="big">$29,328 – $586,550</div><div class="cap">Multa por no llevar el registro electrónico: 250 a 5,000 UMA (art. 994, fr. IV Bis, LFT), con UMA 2026 de $117.31.</div></div>
+      <div class="stat"><div class="big">Desde $1,990</div><div class="cap">Paquetes propuestos con precio neto de referencia: equipo o app, instalación, migración y capacitación incluidos según el paquete. Cotización cerrada tras el diagnóstico.</div></div>
+      <div class="stat"><div class="big">Más de 13 millones</div><div class="cap">Trabajadores que la STPS estima se beneficiarán con la reforma — estimación oficial citada en las Fuentes al final, no una cifra del decreto.</div></div>
+    </div>
+    <p class="muted" style="font-size:.88rem">Información verificada el 11 de noviembre de 2026 con fuentes oficiales citadas al final. En toda la página: <span class="tag tag-hecho">Hecho verificado</span> <span class="tag tag-pend">Pendiente / no es ley</span></p>
+  </header>
+
+  <!-- 1. ESTADO -->
+  <section id="estado">
+    <h2>1. Estado de la reforma: ya es ley, no una propuesta</h2>
+    <p class="sec-intro">Reforma constitucional al art. 123 publicada en el DOF el 3 de marzo de 2026 y reforma a la Ley Federal del Trabajo publicada el 1 de mayo de 2026, en vigor ese mismo día. El periodo de ajuste corre del 1 de mayo al 31 de diciembre de 2026.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Hitos oficiales</h3>
+        <ul class="hitos">
+          <li><span class="fecha">25 feb 2026</span><span>Diputados aprueba la reforma constitucional al art. 123 (469 votos en lo general).</span></li>
+          <li><span class="fecha">3 mar 2026</span><span>Publicación en el DOF de la reforma constitucional (art. 123, fracc. IV y XI, apartado A).</span></li>
+          <li><span class="fecha">22 abr 2026</span><span>Diputados aprueba la reforma a la LFT por unanimidad (441 votos), Boletín No. 3778.</span></li>
+          <li><span class="fecha">1 may 2026</span><span>Publicación en el DOF del decreto que reforma la LFT; entra en vigor ese día.</span></li>
+          <li><span class="fecha">1 ene 2027</span><span>Primera reducción (46 h) y entrada en vigor de las disposiciones STPS sobre registro electrónico.</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>¿A quiénes aplica?</h3>
+        <ul class="plain">
+          <li>A las relaciones laborales del apartado A del art. 123 y la LFT: en la práctica, <strong>el sector privado</strong> — clínicas, tiendas, talleres, escuelas privadas y restaurantes del Valle de Toluca con trabajadores subordinados.</li>
+          <li><strong>No hay exención automática por tamaño en el decreto.</strong> La STPS definirá el ámbito y las excepciones del registro en disposiciones generales aún no publicadas: hoy no es responsable afirmar que una microempresa quedará exenta ni que quedará incluida.</li>
+          <li>Alejandro Salafranca (Unidad de Trabajo Digno, STPS) adelantó a <em>El Economista</em> que la aplicación será paulatina, empezando por empresas grandes y medianas, sin imponer una tecnología ni un formato. Eso no exime a las PyMEs: la obligación y el riesgo en juicios existen desde el 1-ene-2027 para quien quede en el ámbito que defina la STPS.</li>
+          <li>El calendario de reducción (46 h en 2027) no depende del tamaño del negocio.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chartbox">
+      <h3>Cronograma gradual — jornada máxima y horas extra por año</h3>
+      <svg viewBox="0 0 720 240" role="img" aria-label="Gráfica escalonada: la jornada máxima baja de 48 horas en 2026 a 46 en 2027, 44 en 2028, 42 en 2029 y 40 en 2030">
+        <line x1="60" y1="200" x2="690" y2="200" stroke="var(--line)" stroke-width="2"/>
+        <polyline points="80,30 200,30 200,72 330,72 330,114 460,114 460,156 590,156 590,198 680,198" fill="none" stroke="var(--teal)" stroke-width="4" stroke-linejoin="round"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="15" font-weight="600" fill="var(--navy)">
+          <text x="86" y="22">48 h</text><text x="206" y="64">46 h</text><text x="336" y="106">44 h</text><text x="466" y="148">42 h</text><text x="596" y="190">40 h</text>
+        </g>
+        <g font-family="Public Sans, sans-serif" font-size="13" fill="var(--muted)" text-anchor="middle">
+          <text x="130" y="222">2026</text><text x="265" y="222">2027</text><text x="395" y="222">2028</text><text x="525" y="222">2029</text><text x="640" y="222">2030</text>
+        </g>
+      </svg>
+      <div class="tbl-wrap">
+      <table class="tbl">
+        <caption>Transitorio 2º del decreto DOF 1-may-2026. Cada escalón entra el 1 de enero.</caption>
+        <thead><tr><th>Desde el 1 de enero de</th><th class="num">Jornada máxima</th><th class="num">Extra al doble (100% adic.)</th><th class="num">Extra al triple (200% adic.)</th></tr></thead>
+        <tbody>
+          <tr><td>2026</td><td class="num">48 h</td><td class="num">9 h/sem</td><td class="num">Hasta 4 h/sem</td></tr>
+          <tr><td class="hl">2027</td><td class="num hl">46 h</td><td class="num">9 h/sem</td><td class="num">Hasta 4 h/sem</td></tr>
+          <tr><td>2028</td><td class="num">44 h</td><td class="num">10 h/sem</td><td class="num">Hasta 4 h/sem</td></tr>
+          <tr><td>2029</td><td class="num">42 h</td><td class="num">11 h/sem</td><td class="num">Hasta 4 h/sem</td></tr>
+          <tr><td class="hl">2030</td><td class="num hl">40 h</td><td class="num">12 h/sem</td><td class="num">Hasta 4 h/sem</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="muted" style="font-size:.9rem;margin:0">Ojo: decir «12 horas extra al doble» solo aplica en <strong>2030</strong>; en 2026–2027 el tope es de 9 h. Y cada 1 de enero hay que ajustar el tope en tu sistema de asistencia y en tu nómina.</p>
+    </div>
+  </section>
+
+  <!-- 2. REGLAS -->
+  <section id="reglas">
+    <h2>2. Salario, horas extra y descansos: las reglas que mueven la nómina</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Salario protegido</h3>
+        <p>Transitorio 7º: <em>«En ningún caso la reducción de la jornada laboral implicará la disminución de sueldos, salarios o prestaciones de las personas trabajadoras»</em>. El trabajador cobra lo mismo por menos horas: el costo por hora efectiva sube conforme avanza la reducción.</p>
+        <h3 style="margin-top:16px">Horas extra (arts. 66 y 68 LFT)</h3>
+        <ul class="plain">
+          <li>Dentro del tope del año: <strong>pago doble</strong> (100% adicional). En 2027 el tope transitorio es de <strong>9 h/semana</strong> (transitorio 4º del decreto). No lo leas como si en 2027 ya aplicara completo el esquema final: el tope de <strong>12 h/semana</strong> —distribuibles en hasta 4 h diarias y máximo 4 días, según el texto definitivo del art. 66— llega recién en <strong>2030</strong>. En 2027 manda el tope de 9 h.</li>
+          <li>Por encima del tope del año: hasta 4 h más por semana con <strong>pago triple</strong> (200% adicional).</li>
+          <li><strong>Tope absoluto diario: ordinaria + extraordinaria nunca más de 12 h en un día.</strong></li>
+          <li>Menores de 18 años no pueden trabajar tiempo extra (art. 178).</li>
+        </ul>
+        <div class="example"><strong>Ejemplo:</strong> en 2027, jornada de 46 h, salario de $80/hora, semana de 57 h trabajadas → 9 h al doble (9 × $160 = $1,440) + 2 h al triple (2 × $240 = $480) = <strong>$1,920 de tiempo extra</strong> esa semana.</div>
+      </div>
+      <div class="card">
+        <h3>Jornada diaria y descansos (sin cambio en máximos diarios)</h3>
+        <ul class="plain">
+          <li>Jornada diurna máx. 8 h, nocturna 7 h, mixta 7.5 h (art. 61). La reforma <strong>no</strong> autoriza por sí sola jornadas de 10 h × 4 días.</li>
+          <li>La jornada es distribuible <strong>de común acuerdo</strong> (art. 58); el cambio de horario se formaliza por escrito, nunca unilateral.</li>
+          <li>Descanso semanal: al menos 1 día con goce de salario íntegro por cada 6 días (art. 69). La reforma <strong>no crea un segundo día de descanso obligatorio</strong>: trabajar 5 × 8 h es una forma de llegar a 40 h en 2030, no una obligación desde 2027.</li>
+          <li>Prima dominical de al menos <strong>25%</strong> (art. 71); trabajo en día de descanso: salario doble adicional (art. 73); descanso de al menos 30 min en jornada continua (art. 63).</li>
+          <li>El decreto no fija metas de productividad: el reto es organizativo — que las 2 h recortadas no se conviertan en horas extra sistemáticas al doble o triple.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. MULTAS -->
+  <section id="multas">
+    <h2>3. Multas y riesgos: lo que te puede costar no registrar</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>La multa específica del registro</h3>
+        <p><strong>LFT art. 994, fr. IV Bis:</strong> multa de <strong>250 a 5,000 UMA</strong> a la persona empleadora que incumpla el art. 132, fr. XXXIV (registro electrónico). Con la UMA 2026 de $117.31 (INEGI):</p>
+        <p class="mono" style="font-size:1.15rem;font-weight:600;color:var(--navy)">Mínimo $29,327.50 · Máximo $586,550 MXN</p>
+        <ul class="plain">
+          <li>La multa <strong>no es automática en el máximo</strong>: se individualiza conforme al art. 992 (gravedad, reincidencia, circunstancias) y debe acreditarse que el patrón está en el ámbito de aplicación.</li>
+          <li>La cifra en pesos cambiará en 2027 cuando el INEGI publique la UMA 2027 (aún no publicada).</li>
+        </ul>
+        <div class="example"><strong>Importante:</strong> el rango de $29,328 a $586,550 es el rango legal por infracción. La cantidad exacta depende de la gravedad y las circunstancias de cada caso; no es una cifra fija ni automática.</div>
+      </div>
+      <div class="card">
+        <h3>Riesgos distintos de la multa (igual o más caros)</h3>
+        <ul class="plain">
+          <li><strong>Juicios laborales:</strong> la carga de la prueba es del patrón (art. 784); debe conservar los controles de asistencia (art. 804, fr. III) y, si no los exhibe, se presumen ciertos los hechos del trabajador (art. 805). Sin registro fiable, una demanda de horas extra es muy difícil de defender.</li>
+          <li><strong>Concordancia nómina vs. registro (recomendación práctica):</strong> conviene que el registro y el CFDI de nómina reflejen la misma realidad. Esta guía no afirma un criterio específico del SAT sobre deducibilidad del tiempo extra —eso debe confirmarlo tu contador con la normatividad fiscal vigente—; lo que sí es seguro es que una incongruencia deja tu registro débil como evidencia.</li>
+          <li><strong>Conservación laboral mínima:</strong> controles de asistencia durante el último año y un año después de extinguida la relación laboral (art. 804, fr. III). Conservarlos <strong>5 años es una recomendación prudente</strong> frecuente en materia fiscal y de seguridad social, <strong>no</strong> el plazo que fija el art. 804 para el control de asistencia.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. OBLIGACIONES -->
+  <section id="obligaciones">
+    <h2>4. Obligaciones concretas del empleador</h2>
+    <p class="sec-intro">Obligación central — <strong>art. 132, fr. XXXIV</strong>: registrar <strong>de manera electrónica</strong> la jornada de cada trabajador, con horario de inicio y finalización, y proporcionarlo a la autoridad cuando lo requiera. El registro hace <strong>prueba plena si se acredita que fue acordado</strong> entre trabajador y empleador: por eso el acuerdo por escrito es parte esencial del cumplimiento.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Qué debe poder evidenciar (a reserva de las disposiciones STPS)</h3>
+        <ul class="check">
+          <li>Identidad del trabajador, fecha y horario asignado (turno).</li>
+          <li>Hora efectiva de inicio y término de cada jornada, no solo el horario programado.</li>
+          <li>Incidencias: retardos, faltas, permisos, vacaciones, incapacidades, descansos trabajados y horas extra con su clasificación doble/triple.</li>
+          <li>Correcciones y omisiones con bitácora: quién las hizo, por qué y con qué autorización — sin sobrescribir el dato original.</li>
+          <li>Cambios de turno y de horario formalizados por escrito.</li>
+          <li>Concordancia entre registro de asistencia, contrato/horario pactado y nómina/CFDI.</li>
+          <li>Si usa biometría: aviso de privacidad y consentimiento por escrito (LFPDPPP). El registro no autoriza vigilancia generalizada.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Lo que ya no basta</h3>
+        <ul class="plain">
+          <li><strong>Libreta de firmas en papel:</strong> alterable, suplantable y desestimada en juicio (arts. 784/805).</li>
+          <li><strong>Excel manual sin trazabilidad.</strong></li>
+          <li>Un reporte generado unilateralmente sin acuerdo con el trabajador: no alcanza prueba plena automáticamente. Tampoco puede asegurarse hoy que una hoja de Excel satisfaga las disposiciones STPS pendientes.</li>
+        </ul>
+        <h3 style="margin-top:16px">Qué cambia en turnos y nómina</h3>
+        <ul class="plain">
+          <li><strong>Reparametrizar el tope cada 1 de enero</strong> (48→46→44→42→40) en asistencia y nómina. Dejar el sistema en 48 h es el error silencioso más probable de 2027.</li>
+          <li>Rediseñar turnos antes de cada escalón: recorte de 2 h/semana, turnos escalonados, apoyo en horas pico u horas extra autorizadas y presupuestadas. En clínicas, restaurantes y escuelas el recorte no puede ser «cerrar 2 h antes» sin rediseñar cobertura.</li>
+          <li>Actualizar contratos y reglamento interior: jornada pactada, autorización de horas extra y el acuerdo sobre el registro electrónico. Los formatos deben revisarlos tu contador o abogado; nosotros entregamos la parte técnica y la evidencia del registro.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:26px">Lo que todavía NO es ley — no lo tomes como obligación 2027 <span class="tag tag-pend">Pendiente</span></h3>
+    <div class="warn-grid">
+      <div class="warn">
+        <h3>Disposiciones STPS del registro</h3>
+        <p style="margin:0">Sin publicar en el DOF al 30-oct-2026, aunque entran en vigor el 1-ene-2027. Ricardo Barbosa (Srio. del Trabajo de Jalisco, 21-oct-2026) declaró que saldrían en la <strong>primera quincena de diciembre de 2026</strong>, con posibles reglas especiales y una posible gracia de 30–60 días. <strong>Es una declaración, no una publicación.</strong> Hay que vigilar el DOF a diario en diciembre.</p>
+      </div>
+      <div class="warn">
+        <h3>Desconexión digital general</h3>
+        <p style="margin:0">Hoy solo es obligatoria en <strong>teletrabajo</strong> (art. 330-E, fr. VI + NOM-037-STPS-2023; aplica si se labora &gt;40% del tiempo desde casa). El dictamen general solo pasó la Comisión de Trabajo del Senado el 14-oct-2026; falta Estudios Legislativos, Pleno, vuelta a Diputados y DOF. Si se publica, entraría en vigor 180 días después: no sería obligatoria antes de mediados de 2027. Hoy es buena práctica, no una obligación general.</p>
+      </div>
+      <div class="warn red">
+        <h3>«Certificado por la STPS» — no existe</h3>
+        <p style="margin:0">No hay proceso oficial de certificación de sistemas de asistencia, y la ley <strong>no nombra dispositivo ni exige biometría</strong>. Una app, un kiosko o un biométrico pueden servir si el registro es electrónico, íntegro y entregable. Si alguien te ofrece un sistema «certificado por la STPS», desconfía: ese aval no existe.</p>
+      </div>
+      <div class="warn">
+        <h3>UMA, salario mínimo y estímulos 2027</h3>
+        <p style="margin:0">Ninguno publicado a noviembre de 2026: la UMA la publica el INEGI en enero y el salario mínimo lo fija CONASAMI en diciembre. El plan de estímulos fiscales para MiPyMEs fue anunciado <strong>sin decreto, reglas ni publicación en el DOF</strong>: no cuentes con él hasta que se publique.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. OPCIONES -->
+  <section id="opciones">
+    <h2>5. Cómo se cumple: las opciones, sin marcas ni modelos</h2>
+    <p class="sec-intro">La ley no pide una marca ni un aparato en específico: pide un registro electrónico íntegro, acordado con tu personal y entregable a la autoridad. Hay tres formas de resolverlo, y no todas le convienen a todos los negocios.</p>
+    <div class="grid3">
+      <div class="card">
+        <h3>Reloj biométrico de huella</h3>
+        <p style="margin:0">El empleado checa con su huella al entrar y salir. Es la opción más directa para negocios con un punto fijo y personal que siempre llega al mismo lugar: tiendas, talleres, consultorios y restaurantes pequeños.</p>
+        <p class="muted" style="margin-top:10px;font-size:.92rem">Punto a valorar en el diagnóstico: si tu personal trabaja con guantes, grasa o la huella desgastada, puede no ser la mejor opción.</p>
+      </div>
+      <div class="card">
+        <h3>Reloj facial</h3>
+        <p style="margin:0">El empleado checa con su rostro, sin tocar nada y sin que nadie pueda checar por otro. Pensado para lugares donde la higiene, la rotación o la suplantación son un problema: clínicas, escuelas y restaurantes.</p>
+        <p class="muted" style="margin-top:10px;font-size:.92rem">Punto a valorar en el diagnóstico: tu volumen de personal, la luz del acceso y si también necesitas huella o tarjeta como respaldo.</p>
+      </div>
+      <div class="card">
+        <h3>App / kiosko sin reloj</h3>
+        <p style="margin:0">La checada se hace desde una app en el celular o desde una tablet o computadora en el negocio. Sirve cuando no hay un punto fijo único, el personal trabaja en campo o tienes una segunda sucursal.</p>
+        <p class="muted" style="margin-top:10px;font-size:.92rem">Punto a valorar en el diagnóstico: cómo controlas que la checada sea real y no desde casa, y qué pasa si se va el internet.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <h3>Lo que incluye el cumplimiento completo — uses la opción que uses</h3>
+      <ul class="check">
+        <li><strong>Diagnóstico previo ($990, ver sección 6):</strong> revisamos tus jornadas reales, cómo registras hoy y dónde está tu riesgo. Ahí se define qué tipo de registro te conviene — esa recomendación no va en una página pública, va con tu caso. El diagnóstico no es gratuito; se descuenta íntegro si contratas un paquete en 15 días.</li>
+        <li><strong>Instalación y configuración en sitio</strong> en el Valle de Toluca: equipo o app listos, turnos configurados con el tope vigente (46 h en 2027) y pruebas de checada con tu personal.</li>
+        <li><strong>Migración desde libreta o Excel:</strong> pasamos tu padrón actual al sistema y conciliamos la primera quincena para que nada se pierda en el cambio.</li>
+        <li><strong>Capacitación:</strong> tu encargado aprende a corregir omisiones, autorizar horas extra y sacar el reporte y el expediente para cuando la autoridad lo pida.</li>
+        <li><strong>Póliza mensual opcional:</strong> soporte, reporte mensual de asistencia y horas extra, respaldo y el reajuste del tope cada 1 de enero (46 → 44 → 42 → 40 h), para que no tengas que acordarte tú.</li>
+      </ul>
+      <p class="muted" style="font-size:.92rem;margin-top:10px"><strong>Lo que no hacemos:</strong> no redactamos contratos, no representamos ante la STPS ni en juicios y no ofrecemos ninguna “certificación STPS”, porque no existe. Para contratos y temas legales te recomendamos revisarlos con tu contador o abogado.</p>
+    </div>
+  </section>
+
+  <!-- 6. PRECIOS -->
+  <section id="precios">
+    <h2>6. Paquetes y precios <span class="tag tag-hecho">Precios netos</span></h2>
+    <p class="sec-intro">Precios netos propuestos: el precio final que pagas por el paquete contratado, sin cargos adicionales dentro de su alcance. Todos los paquetes incluyen instalación en sitio en el Valle de Toluca, configuración con el tope de 46 h de 2027, migración desde libreta o Excel y capacitación. La diferencia entre paquetes es el tipo de registro — y cuál te conviene se confirma en el diagnóstico. <strong>El diagnóstico no es gratuito:</strong> cuesta $990 (1–15 empleados) y se descuenta íntegro si contratas un paquete en 15 días. La cotización cerrada de tu caso se entrega por escrito tras el diagnóstico.</p>
+
+    <div class="grid3">
+      <div class="pkg featured">
+        <span class="tag tag-prop">Punto fijo · Huella</span>
+        <h3 style="margin-top:10px">Paquete Esencial — Huella</h3>
+        <div class="price">$4,990</div><div class="per">MXN precio neto · Anticipo $2,495 · Urgencia $7,485</div>
+        <ul>
+          <li>Reloj biométrico de huella + instalación y configuración en sitio</li>
+          <li>1 equipo, 1 sucursal, hasta 15 empleados</li>
+          <li>Turnos con tope 46 h 2027 y alta de huellas de tu personal</li>
+          <li>Migración desde libreta/Excel + capacitación de 1 h</li>
+          <li>Reporte de entrega y respaldo inicial</li>
+        </ul>
+      </div>
+      <div class="pkg">
+        <span class="tag tag-prop">Sin contacto</span>
+        <h3 style="margin-top:10px">Paquete Facial</h3>
+        <div class="price">$6,990</div><div class="per">MXN precio neto · Anticipo $3,495 · Urgencia $10,485</div>
+        <ul>
+          <li>Reloj facial (rostro, con huella y tarjeta como respaldo)</li>
+          <li>Todo lo del Esencial, con alta de rostros</li>
+          <li>Pensado para clínicas, escuelas y manejo de alimentos</li>
+          <li>Primer mes de póliza gratis al contratar este paquete</li>
+        </ul>
+      </div>
+      <div class="pkg">
+        <span class="tag tag-prop">Sin hardware</span>
+        <h3 style="margin-top:10px">Paquete Solo App</h3>
+        <div class="price">$1,990</div><div class="per">MXN precio neto · Anticipo $995 · Urgencia $2,985</div>
+        <ul>
+          <li>Configuración de app de asistencia y kiosko en tablet o PC</li>
+          <li>Checada móvil para personal en campo o segunda sucursal</li>
+          <li>La suscripción del software, si aplica, se paga aparte al proveedor: desde $0 a $336/mes según el plan que necesites</li>
+          <li>Turnos, migración y capacitación incluidos</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted" style="font-size:.92rem;margin-top:12px"><strong>Qué incluye cada paquete:</strong> equipo según el paquete (o configuración de app), instalación en sitio, software de registro, turnos con tope 46 h, migración de tu padrón, capacitación de 1 h al encargado más arranque con el personal, reporte de entrega, respaldo inicial, plantilla de aviso de privacidad y formato de acuerdo de registro electrónico para revisión de tu contador o abogado, y garantía del equipo de 1 año del fabricante. <strong>Adicionales aparte:</strong> segundo equipo o sucursal (10% de descuento en el segundo), cableado mayor a 10 m, tablet para kiosko, respaldo de energía y reconfiguración anual suelta $499 (incluida si tienes póliza).</p>
+
+    <div class="tbl-wrap">
+    <table class="tbl">
+      <caption>Servicios sueltos (precio único, 50% de anticipo)</caption>
+      <thead><tr><th>Servicio</th><th class="num">Precio</th><th class="num">Urgencia +50%</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnóstico / auditoría exprés (1–15 empleados) — se descuenta íntegro si contratas un paquete en 15 días</td><td class="num">$990</td><td class="num">$1,485</td></tr>
+        <tr><td>Diagnóstico (16–50 empleados) — incluye revisión por puesto y turno</td><td class="num">$1,490</td><td class="num">$2,235</td></tr>
+        <tr><td>Instalación y configuración sola (ya tienes el equipo; 1 equipo, 1 sucursal)</td><td class="num">$1,490</td><td class="num">$2,235</td></tr>
+        <tr><td>Migración desde libreta / Excel (suelta)</td><td class="num">$990 – $1,490</td><td class="num">$1,485 / $2,235</td></tr>
+        <tr><td>Configuración de software / app sin hardware</td><td class="num">$990</td><td class="num">$1,485</td></tr>
+        <tr><td>Capacitación suelta (1 sesión, 1 h, en sitio o remota)</td><td class="num">$499</td><td class="num">$749</td></tr>
+        <tr><td>Visita de soporte / revisión en sitio (suelta, sin póliza, 1 h)</td><td class="num">$499</td><td class="num">$749</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="tbl-wrap">
+    <table class="tbl">
+      <caption>Póliza mensual de asistencia — tres niveles, según el tamaño de tu negocio</caption>
+      <thead><tr><th>Póliza</th><th class="num">Precio/mes</th><th>Alcance</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Básica</td><td class="num">$790</td><td>Hasta 10 empleados, 1 sucursal. Soporte remoto por WhatsApp en horario hábil, reporte mensual de asistencia y horas extra, altas y bajas, respaldo mensual y reconfiguración del tope cada enero.</td></tr>
+        <tr><td class="hl">Plus</td><td class="num">$1,490</td><td>Hasta 25 empleados, 1–2 sucursales. Básica + revisión quincenal de incidencias, correcciones de omisiones, visita preventiva trimestral y apoyo para preparar tu expediente ante un requerimiento de la STPS.</td></tr>
+        <tr><td class="hl">Pro</td><td class="num">$2,490</td><td>Hasta 50 empleados, multisucursal. Plus + reporte quincenal, visita preventiva mensual, capacitación de refuerzo semestral, respuesta prioritaria el mismo día hábil y conciliación asistencia vs. nómina.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="muted" style="font-size:.92rem">Sin plazo forzoso; cancelación con 30 días. La suscripción de software de terceros, cuando aplica, no está incluida. Equipo de reposición y visitas por daño o mal uso se cotizan aparte, con 10% de descuento si tienes póliza.</p>
+
+    <!-- CALCULADORA -->
+    <div class="calc" id="calc">
+      <h3>Calculadora — cuánto te costaría el primer año</h3>
+      <div class="row">
+        <div>
+          <label for="cPkg">Paquete (pago único)</label>
+          <select id="cPkg">
+            <option value="4990">Esencial — Reloj biométrico de huella — $4,990</option>
+            <option value="6990">Facial — Reloj facial — $6,990</option>
+            <option value="1990">Solo App — $1,990</option>
+            <option value="1490">Solo instalación (ya tienes equipo) — $1,490</option>
+            <option value="0">Sin paquete (solo póliza)</option>
+          </select>
+        </div>
+        <div>
+          <label for="cPol">Póliza mensual</label>
+          <select id="cPol">
+            <option value="790">Básica — $790/mes</option>
+            <option value="1490">Plus — $1,490/mes</option>
+            <option value="2490">Pro — $2,490/mes</option>
+            <option value="0">Sin póliza</option>
+          </select>
+        </div>
+        <div>
+          <label for="cDiag">Diagnóstico previo</label>
+          <select id="cDiag">
+            <option value="0">No / ya incluido en el cierre</option>
+            <option value="990">Exprés 1–15 empleados — $990</option>
+            <option value="1490">16–50 empleados — $1,490</option>
+          </select>
+        </div>
+      </div>
+      <div class="checkline">
+        <input type="checkbox" id="cUrg"><label for="cUrg">Urgencia (+50% sobre paquete y diagnóstico: entrega en menos de 72 h o diciembre con agenda saturada)</label>
+      </div>
+      <div class="calc-out">
+        <div class="cell"><div class="v" id="oAnticipo">$0</div><div class="k">Anticipo hoy (50% del pago único)</div></div>
+        <div class="cell"><div class="v" id="oUnico">$0</div><div class="k">Pago único total (paquete + diagnóstico)</div></div>
+        <div class="cell"><div class="v" id="oAnio">$0</div><div class="k">Costo total del año 1 (único + 12 meses de póliza)</div></div>
+        <div class="cell"><div class="v" id="oVs">$29,328 – $586,550</div><div class="k">Rango legal de la multa por el registro — solo como referencia</div></div>
+      </div>
+      <p class="note">Precios en MXN, precios netos propuestos: el precio final que pagas por lo contratado, sin cargos adicionales dentro de su alcance. La suscripción de software de terceros, si aplica, se paga aparte al proveedor. El diagnóstico se descuenta íntegro si contratas un paquete en 15 días. Ejemplo: una clínica de 12 empleados con Esencial + Básica paga $4,990 + ($790 × 12) = $14,470 el primer año. <strong>Comparación solo referencial:</strong> la multa, si la autoridad la impone, va de $29,328 a $586,550 según la gravedad y las circunstancias de cada caso (art. 992) y no es automática — por eso el costo de cumplir no debe leerse como un “ahorro seguro” frente a la multa mínima.</p>
+    </div>
+
+    <div class="alert-strip" style="margin-top:16px">
+      <strong>Nota sobre precios:</strong> todos los precios de esta sección son <strong>precios netos</strong> — el precio final que pagas, sin cargos adicionales. <strong>Equipos y precios sujetos a disponibilidad de proveedores y tipo de cambio.</strong>
+    </div>
+  </section>
+
+  <!-- SIGUIENTE PASO -->
+  <section id="siguiente-paso">
+    <h2>7. El siguiente paso: un diagnóstico con tu caso</h2>
+    <p class="sec-intro">Esta guía te dice qué pide la ley y cuánto cuestan los paquetes. Lo que no puede decirte — porque depende de tu negocio — es qué tipo de registro te conviene, si tu turno actual rebasa el tope de 46 h y cuánto tiempo extra estás pagando hoy sin darte cuenta. Eso se ve en el diagnóstico.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Qué revisamos en el diagnóstico</h3>
+        <ul class="check">
+          <li>Tus jornadas reales por puesto frente al tope de 46 h de 2027.</li>
+          <li>Cómo registras hoy la asistencia y qué tan defendible es ese registro.</li>
+          <li>Tus horas extra actuales y cómo se clasificarían con la nueva ley.</li>
+          <li>Qué opción te conviene — huella, facial o app — y por qué, con costo cerrado.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Qué te llevas</h3>
+        <ul class="plain">
+          <li>Un semáforo de riesgo claro: dónde estás parado hoy.</li>
+          <li>Un plan de acción con fechas, para llegar listo al 1 de enero de 2027.</li>
+          <li>La cotización cerrada de tu paquete, con precio neto y anticipo.</li>
+          <li>Si contratas tu paquete en 15 días, el diagnóstico se te descuenta íntegro.</li>
+        </ul>
+        <p class="muted" style="font-size:.92rem">Diagnóstico exprés (1–15 empleados): $990 precio neto. Agenda tu diagnóstico por WhatsApp desde el sitio de TechNexus o en tu visita de póliza.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUENTES -->
+  <section id="fuentes">
+    <h2>Fuentes</h2>
+    <p class="sec-intro">Leídas el 11 de noviembre de 2026.</p>
+    <ol class="srcs">
+      <li><strong>Diario Oficial de la Federación, 3 de marzo de 2026 (edición vespertina)</strong> — Decreto por el que se reforman las fracciones IV y XI del Apartado A del artículo 123 constitucional, en materia de reducción de la jornada laboral. Es la publicación oficial de la reforma constitucional; consúltala en el DOF por fecha y título del decreto.</li>
+      <li><strong>Diario Oficial de la Federación, 1 de mayo de 2026 (edición vespertina)</strong> — Decreto por el que se reforman, adicionan y derogan diversas disposiciones de la Ley Federal del Trabajo, en materia de reducción de la jornada laboral: arts. 58, 59, 61, 66 a 69, 71, 132 (fracción XXXIV) y 994 (fracción IV Bis), y sus transitorios 2º, 4º y 7º. Es la publicación oficial de la reforma a la LFT; consúltala en el DOF por fecha y título del decreto.</li>
+      <li><strong>Ley Federal del Trabajo, texto vigente</strong> — Cámara de Diputados, Biblioteca de Leyes (LeyesBiblio): arts. 58, 59, 61, 63, 66, 68, 69, 71, 73, 132 fr. XXXIV, 178, 784, 804, 805, 992 y 994 fr. IV Bis, en su versión con la reforma del 1-may-2026.</li>
+      <li>H. Cámara de Diputados, Boletín No. 3778, 22-abr-2026 — aprobación de la reforma a la LFT, calendario gradual, registro electrónico, multa 250–5,000 UMA. <a href="https://comunicacionsocial.diputados.gob.mx/index.php/boletines/-por-unanimidad-la-camara-de-diputados-aprobo-reducir-la-jornada-laboral-de-48-a-40-horas-semanales-sin-disminucion-salarial-y-de-manera-gradual" target="_blank" rel="noopener">comunicacionsocial.diputados.gob.mx</a></li>
+      <li>H. Cámara de Diputados — aprobación de la reforma constitucional al art. 123, 25-feb-2026. <a href="https://comunicacionsocial.diputados.gob.mx/index.php/boletines/por-mayoria-calificada-la-camara-de-diputados-aprobo-reforma-para-reducir-la-jornada-laboral-de-48-a-40-horas-semanales" target="_blank" rel="noopener">comunicacionsocial.diputados.gob.mx</a></li>
+      <li>INEGI — Comunicado 1/26, 8-ene-2026: UMA 2026 diaria $117.31. <a href="https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/uma/uma2026.pdf?from_url=https" target="_blank" rel="noopener">inegi.org.mx</a></li>
+      <li>Estimación de beneficiarios — la STPS estima que la reforma beneficiará a más de 13 millones de personas trabajadoras (13.4 millones en el dictamen citado por el grupo parlamentario). Es una <strong>estimación</strong>, no una cifra fijada en el decreto. <a href="https://diputadosmorena.org.mx/morena-consolida-reforma-historica-en-favor-de-las-y-los-trabajadores-con-jornada-de-40-horas/" target="_blank" rel="noopener">diputadosmorena.org.mx</a></li>
+    </ol>
+  </section>
+
+  <footer>
+    <p style="font-size:.95rem;color:var(--ink)"><strong>Equipos y precios sujetos a disponibilidad de proveedores y tipo de cambio.</strong> Todos los precios mostrados en esta página son precios netos: el precio final que paga el cliente, sin cargos adicionales.</p>
+    Guía de TechNexus elaborada el 11 de noviembre de 2026 a partir de las fuentes oficiales citadas arriba. Este material es información general y no es asesoría legal: los formatos de acuerdo y contratos deben revisarlos el contador o abogado de cada cliente.
+  </footer>
+</div>
+
+<script>
+(function(){
+  // Cuenta regresiva al 1 de enero de 2027 (hora local del visitante)
+  var target = new Date(2027, 0, 1, 0, 0, 0);
+  var el = document.getElementById('cdNum');
+  function tick(){
+    var now = new Date();
+    var diff = target - now;
+    if (diff <= 0) { el.textContent = '¡Ya!'; return; }
+    var days = Math.ceil(diff / 86400000);
+    el.textContent = days;
+  }
+  tick();
+
+  // Calculadora de cotización (estado solo en memoria, durante la sesión)
+  var fmt = function(n){ return '$' + n.toLocaleString('es-MX'); };
+  var pkg = document.getElementById('cPkg'), pol = document.getElementById('cPol'),
+      diag = document.getElementById('cDiag'), urg = document.getElementById('cUrg');
+  function calc(){
+    var unico = parseInt(pkg.value,10) + parseInt(diag.value,10);
+    if (urg.checked) unico = Math.round(unico * 1.5);
+    var anio = unico + parseInt(pol.value,10) * 12;
+    document.getElementById('oAnticipo').textContent = fmt(Math.round(unico / 2));
+    document.getElementById('oUnico').textContent = fmt(unico);
+    document.getElementById('oAnio').textContent = fmt(anio);
+    // La multa se muestra solo como rango legal de referencia ($29,328–$586,550):
+    // no se calcula como ahorro, porque su imposición y monto no son automáticos.
+    document.getElementById('oVs').textContent = '$29,328 – $586,550';
+  }
+  [pkg, pol, diag, urg].forEach(function(c){ c.addEventListener('change', calc); });
+  calc();
+})();
+</script>
+</body>
+</html>
